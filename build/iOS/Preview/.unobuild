@@ -1,0 +1,4 @@
+$: -1297792159
+BuildCommand: "bash build.sh"
+RunCommand: "bash run.sh"
+Product: build/Release-iphoneos/accountBook.app/accountBook

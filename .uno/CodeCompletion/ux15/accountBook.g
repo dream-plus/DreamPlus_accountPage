@@ -1,0 +1,9 @@
+.uno/CodeCompletion/ux15/MainView.g.uno
+.uno/CodeCompletion/ux15/accountBook.g.uno
+.uno/CodeCompletion/ux15/board.g.uno
+.uno/CodeCompletion/ux15/home.g.uno
+.uno/CodeCompletion/ux15/schedule.g.uno
+.uno/CodeCompletion/ux15/addPage.g.uno
+.uno/CodeCompletion/ux15/expense.g.uno
+.uno/CodeCompletion/ux15/income.g.uno
+.uno/CodeCompletion/ux15/accountBook.unoproj.g.uno

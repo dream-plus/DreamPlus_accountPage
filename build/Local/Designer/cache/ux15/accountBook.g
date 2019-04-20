@@ -1,0 +1,11 @@
+build/Local/Designer/cache/ux15/MainView.g.uno
+build/Local/Designer/cache/ux15/accountBook.g.uno
+build/Local/Designer/cache/ux15/board.g.uno
+build/Local/Designer/cache/ux15/home.g.uno
+build/Local/Designer/cache/ux15/schedule.g.uno
+build/Local/Designer/cache/ux15/accountHome.g.uno
+build/Local/Designer/cache/ux15/accountTopbar.g.uno
+build/Local/Designer/cache/ux15/addPage.g.uno
+build/Local/Designer/cache/ux15/expense.g.uno
+build/Local/Designer/cache/ux15/income.g.uno
+build/Local/Designer/cache/ux15/accountBook.unoproj.g.uno

@@ -1,0 +1,15 @@
+<Page ux:Class="accountBook">
+	<Router ux:Dependency="router" />
+	
+	<JavaScript File="accountBook.js" />
+
+	<Panel Dock="Top">
+		<accountTopbar />
+	</Panel>
+
+
+	<Panel>
+		<accountHome />
+	</Panel>
+
+</Page>

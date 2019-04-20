@@ -1,0 +1,80 @@
+<App>
+	<!-- <ClientPanel> -->
+	<Router ux:Name="router" />
+	<JavaScript File="MainView.js" />
+	<Panel Dock="Bottom" Alignment="Bottom">
+		<Grid Color="#FBFCFB" ChildOrder="ColumnMajor" Alignment="Bottom" Height="70" Opacity="1" LayoutRole="Standard" RowCount="1" ColumnCount="4">
+			<Shadow Color="#ACACAC" Angle="179" />
+			<Panel Alignment="Default">
+				<Image File="Assets/logoGray.png" Alignment="Default" Width="40" Y="10" />
+				<Text Value="홈" FontSize="10" TextColor="#909191" Alignment="HorizontalCenter" Y="40" />
+				<Clicked>
+					<Callback Handler="{gotoHome}" />						
+				</Clicked>
+			</Panel>
+
+			<Panel Alignment="Default">
+				<Text Value="게시판" FontSize="10" TextColor="#979998" Alignment="HorizontalCenter" Y="40" />
+				<Clicked>
+					<Callback Handler="{gotoBoard}" />
+				</Clicked>
+			</Panel>
+
+			<Panel Alignment="Default">
+				<Text FontSize="10" Value="스케줄" Alignment="HorizontalCenter" TextColor="#979A98" Y="40" />
+				<Clicked>
+					<Callback Handler="{gotoSchedule}" />
+				</Clicked>
+			</Panel>
+
+			<Panel Alignment="Default">
+				<Text FontSize="10" Value="장부" Alignment="HorizontalCenter" TextColor="#969A97" Y="40" />
+				<Clicked>
+					<Callback Handler="{gotoAccount}" />
+				</Clicked>
+			</Panel>
+		</Grid>
+		
+	</Panel>
+
+	
+	<Navigator DefaultPath="home">
+		<home ux:Template="home" router="router" Color="#FFF">
+			<Transition>
+				<Move X="1" RelativeTo="ParentSize" />
+			</Transition>
+		</home>
+		<board ux:Template="board" router="router" Color="#FFF">
+			<Transition>
+				<Move X="1" RelativeTo="ParentSize" />
+			</Transition>
+		</board>	
+		<schedule ux:Template="schedule" router="router" Color="#FFF">
+			<Transition>
+				<Move X="1" RelativeTo="ParentSize" />
+			</Transition>
+		</schedule>			
+		<accountBook ux:Template="accountBook" router="router" Color="#FFF">
+			<Transition>
+				<Move X="1" RelativeTo="ParentSize" />
+			</Transition>
+		</accountBook>
+		<income ux:Template="income" router="router" Color="#FFF">
+			<Transition>
+				<Move X="1" RelativeTo="ParentSize" />
+			</Transition>
+		</income>
+		<expense ux:Template="expense" router="router" Color="#FFF">
+			<Transition>
+				<Move X="1" RelativeTo="ParentSize" />
+			</Transition>
+		</expense>
+		<addPage ux:Template="addPage" router="router" Color="#FFF">
+			<Transition>
+				<Move X="1" RelativeTo="ParentSize" />
+			</Transition>
+		</addPage>		
+	</Navigator>
+
+	
+</App>
