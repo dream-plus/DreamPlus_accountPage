@@ -5,7 +5,7 @@ function gotoHome(){
 }
 
 function gotoBoard(){
-	router.goto("board");
+	router.goto("boardMain");
 }
 
 function gotoSchedule(){

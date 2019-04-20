@@ -1,8 +1,0 @@
-<Page ux:Class="board">
-	<Router ux:Dependency="router" />
-	<!-- <JavaScript File="signupInd.js" /> -->
-	<Panel Margin="0, 0, 0, 70">
-		<Image File="../Assets/board.png" />
-	</Panel>
-
-</Page>
