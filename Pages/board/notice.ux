@@ -5,12 +5,12 @@
 		<StackPanel>
 			<Each Items="{items}" ux:Name="theEach" Reuse="Frame">
 				<Grid Dock="Top" Height="50" ColumnCount="3" RowCount="2" Columns="1*,3*,1*" Alignment="Default" Margin="0, 2, 0, 0" ChildOrder="RowMajor">
-					<Text Value="다온" TextAlignment="Center" FontSize="10" Alignment="Center" TextColor="#474437" />
-					<Text Value="{title}" Color="#000000" Alignment="Center" FontSize="10" TextAlignment="Left" />
+					<Text Value="다온" TextAlignment="Center" FontSize="10" Alignment="Center" TextColor="#000" />
+					<Text Value="{title}" Alignment="Center" FontSize="12" TextAlignment="Left" TextColor="#000" />
 					<Text />
-					<Text Value="{name}" Color="#000000" Alignment="Center" FontSize="10" TextColor="#D8D9D8" />
-					<Text Value="{content}" Color="#000000" Alignment="Center" FontSize="15" TextColor="#ACADAC" />
-					<Text Value="{days}" Color="#000000" Alignment="Center" FontSize="15" />
+					<Text Value="{name}" Alignment="Center" FontSize="10" TextColor="#C1C2C1" />
+					<Text Value="{content}" Alignment="Center" FontSize="12" TextColor="#C1C2C1" />
+					<Text Value="{days}" Alignment="CenterLeft" FontSize="10" TextColor="#C1C2C1" />
 				<!-- 	<Clicked>
 						<Callback Handler="{}" />
 					</Clicked> -->

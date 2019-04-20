@@ -19,7 +19,6 @@ exports.isLoading = Observable(false);
 
 svp.check();
 exports.loadMore = function(){
-	//it's possible this gets called again before the previous loading is complete
 
 	if (exports.isLoading.value) {
 		return
@@ -41,10 +40,9 @@ function loadSome(){
 
 
 	}).then(function(result){
-		// result = result;
-		// exports.result = result;
 		return result.json();
 	}).then(function(result){
+		// console.log(JSON.stringify(result[1]));
 		for(var i in result){
 			exports.items.add( {
 				name: result[i].name,
@@ -67,10 +65,3 @@ function loadSome(){
 
 exports.clicked= function(){router.goto("SubPage")}
 
-// module.exports = {
-// 	result:result,
-
-// 	page1: function() { router.goto("page1"); },
-// 	page2: function() { router.goto("page2"); },
-// 	page3: function() { router.goto("page3"); }
-// }
