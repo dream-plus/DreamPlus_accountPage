@@ -4,6 +4,24 @@ var title = Observable("");
 
 var category = ['공지', '자유게시판','QnA'];
 
+var date = new Date(); 
+var year = date.getFullYear(); 
+var month = new String(date.getMonth()+1); 
+var day = new String(date.getDate()); 
+
+// 현재 날짜 구하는 곳 ============
+// 한자리수일 경우 0을 채워준다. 
+if(month.length == 1){ 
+  month = "0" + month; 
+} 
+if(day.length == 1){ 
+  day = "0" + day; 
+} 
+
+var currentdate = Observable(year+"."+month+"."+day);
+// console.log(currentdate.value);
+// ==============
+
 for(var i in category){
 	category.push(i);
 }
@@ -21,12 +39,12 @@ function goBack()
 
 function contents(){
 	var opts2 = ({
-		'_id': 'testid01',
-		'name' : 'youasd',
+		'_id': 'testid02',
+		'name' : 'kbs',
 		'title' : title.value,
 		'category' : category.value,
 		'content' : content.value,
-		date : date
+		date : currentdate.value
 	});
 
 	// console.log(JSON.stringify(opts2));
