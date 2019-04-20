@@ -27,7 +27,7 @@
 
 			<Rectangle Width="350" Height="50" Alignment="Default">
 				<Circle Color="#84B0CA" Margin="0, 0, 300, 0" Alignment="Default" Width="16" Height="16" />
-				<Text Column="1" ux:Name="selectvalue" Width="240" FontSize="15" Alignment="Center" Value="{select}" />
+				<Text Column="1" ux:Name="selectvalue" Width="240" FontSize="15" Alignment="Center" Value="{select} " />
 				<Clicked>
 					<Callback Handler="{toggleChange}" />
 				</Clicked>

@@ -20,22 +20,17 @@ var dayInit = Observable(today.getDate());
 
 var array = ['수입' , '지출'];
 var monthValue = [];
-var dayValue = [];
+var dayValue = Observable();
 
 var Camera = require('FuseJS/Camera');
 var picture = Observable('Images/Camera.png');
 
-// function fn_DayOfMonth(year, month)
-// {
-// 	console.log(32 - new Date(year, month-1, 32).getDate());
-//     // return 32 - new Date(year, month-1, 32).getDate();
-// }
 
 for(i=1; i<13; i++){
 	monthValue.push(i);
 }
 for(i=1; i<33 - new Date(2019, monthInit.value - 1, 32).getDate(); i++){
-	dayValue.push(i);
+	dayValue.add(i);
 }
 
 function toggleChange(){
@@ -71,11 +66,10 @@ function choicemonth(e){
 }
 
 function dayChange(){
-	dayValue = [];
+	dayValue.clear();
 	for(i=1; i<33 - new Date(2019, monthInit.value - 1, 32).getDate(); i++){
-		dayValue.push(i);
+		dayValue.add(i);
 	}
-	// exports.dayValue ;
 	dayToggle.value = true;
 }
 
