@@ -84,6 +84,12 @@
 				<Move X="1" RelativeTo="ParentSize" />
 			</Transition>
 		</write>
+	<!-- 	<notice ux:Template="notice" router="router" Color="#FFF">
+			<Transition>
+				<Move X="1" RelativeTo="ParentSize" />
+			</Transition>
+		</notice> -->
+		<detailPage ux:Template="detailPage" router="router" Color="#FFF"/>
 	</Navigator>
 
 	

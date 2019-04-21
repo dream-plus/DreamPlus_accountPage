@@ -9,7 +9,6 @@ var category = Observable("");
 var name = Observable("");
 var title = Observable("");
 var array = Observable("");
-var result = Observable("");
 var content = Observable("");
 var days = Observable("");
 
@@ -19,7 +18,6 @@ exports.isLoading = Observable(false);
 
 svp.check();
 exports.loadMore = function(){
-
 	if (exports.isLoading.value) {
 		return
 	}
@@ -30,7 +28,6 @@ exports.loadMore = function(){
 	
 }
 
-
 function loadSome(){
 	fetch('http://d4b1ca7d.ngrok.io/board/am',{
 		method: "GET",
@@ -39,18 +36,21 @@ function loadSome(){
 		}
 
 
-	}).then(function(result){
-		return result.json();
-	}).then(function(result){
-		// console.log(JSON.stringify(result[1]));
-		for(var i in result){
-			exports.items.add( {
-				name: result[i].name,
-				title : result[i].title,
-				content : result[i].content,
-				days : result[i].date
-			})
-			// console.log(name.value);				
+	}).then(function(res){
+		return res.json();
+	}).then(function(res){
+
+		for(var i in res){
+
+			exports.items.add({
+				name: res[i].name,
+				title : res[i].title,
+				content : res[i].content,
+				days : res[i].date,
+					// gotoDetails: function() {
+					// 	router.push("detailPage", { name: name,title: title,content: content,days: days})
+					// }
+				});		
 		}
 
 		exports.isLoading.value = false;
@@ -58,9 +58,6 @@ function loadSome(){
 	}).catch((err)=>{
 		console.log(err);
 	});
-
-	
-
 }
 
 exports.clicked= function(){router.goto("SubPage")}

@@ -34,23 +34,17 @@ var date = new Date();
 function goBack()
 {
 	router.push("boardMain");
-	// console.log("goback");
 }
 
 function contents(){
 	var opts2 = ({
-		'_id': 'testid02',
+		'_id': 'testid05',
 		'name' : 'kbs',
 		'title' : title.value,
 		'category' : category.value,
 		'content' : content.value,
 		date : currentdate.value
 	});
-
-	// console.log(JSON.stringify(opts2));
- //    console.log('signin'); //Sign_in 함수가 호출되었는지 확인
- //    console.log(opts2.id, opts2.name)
-
 
     fetch('http://d4b1ca7d.ngrok.io/board/am',{
     	method: "POST",
@@ -70,7 +64,7 @@ function contents(){
 
 	        	if( JSON.parse(res.success) == true){
 	            	// router.push("Home", ID);
-	            	router.push("boardMain", opts2);
+	            	router.push("boardMain");
 	            	// console.log("Move to mainviewBis");
 	            }
 	            // JSON.parse(res._bodyInit).documents[1].address_name

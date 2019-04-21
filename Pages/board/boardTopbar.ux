@@ -1,4 +1,5 @@
 <Page ux:Class="boardTopbar">
+
 	<Panel Color="#FEFFFE" Alignment="Bottom" Margin="0, 0, 0, 70">
 		<DockPanel Alignment="Default" Color="#FDFFFD" Height="50">
 			<Rectangle Dock="Left" Width="100" Margin="10, 0, 0, 0">
@@ -38,6 +39,7 @@
 				<Tab Text="공지">
 					<Clicked>
 						<Set navigation.Active="page1" />
+						<!-- <Callback Handler="{gotoNotice}" /> -->
 					</Clicked>
 				</Tab>
 			</Panel>
@@ -59,19 +61,19 @@
 
 		<PageControl ux:Name="navigation" Color="#FEFFFE">
 			<Page ux:Name="page1" Background="#EAEAEA" Color="#FFFCFE">
-				<WhileActive Threshold="0.5">
+				<WhileActive Threshold="0.01">
 					<Set indicator.LayoutMaster="page1Tab" />
 				</WhileActive>
 				<notice />
 			</Page>
 			<Page ux:Name="page2" Background="#EAEAEA">
-				<WhileActive Threshold="0.5">
+				<WhileActive Threshold="0.01">
 					<Set indicator.LayoutMaster="page2Tab" />
 				</WhileActive>
 				<freeBoard />
 			</Page>
 			<Page ux:Name="page3" Background="#EAEAEA">
-				<WhileActive Threshold="0.5">
+				<WhileActive Threshold="0.01">
 					<Set indicator.LayoutMaster="page3Tab" />
 				</WhileActive>
 				<QnABoard />

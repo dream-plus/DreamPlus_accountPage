@@ -1,19 +1,17 @@
 <Page ux:Class="notice">
+
 	<JavaScript File="notice.js" />
 	
 	<ScrollView LayoutMode="PreserveVisual" Background="#FEFFFE">        
 		<StackPanel>
 			<Each Items="{items}" ux:Name="theEach" Reuse="Frame">
-				<Grid Dock="Top" Height="50" ColumnCount="3" RowCount="2" Columns="1*,3*,1*" Alignment="Default" Margin="0, 2, 0, 0" ChildOrder="RowMajor">
+				<Grid Dock="Top" Height="50" ColumnCount="3" RowCount="2" Columns="1*,3*,1*" Alignment="Default" Margin="0, 2, 0, 0" ChildOrder="RowMajor" Clicked="{gotoDetails}">
 					<Text Value="다온" TextAlignment="Center" FontSize="10" Alignment="Center" TextColor="#000" />
 					<Text Value="{title}" Alignment="Center" FontSize="12" TextAlignment="Left" TextColor="#000" />
 					<Text />
 					<Text Value="{name}" Alignment="Center" FontSize="10" TextColor="#C1C2C1" />
 					<Text Value="{content}" Alignment="Center" FontSize="12" TextColor="#C1C2C1" />
 					<Text Value="{days}" Alignment="CenterLeft" FontSize="10" TextColor="#C1C2C1" />
-				<!-- 	<Clicked>
-						<Callback Handler="{}" />
-					</Clicked> -->
 				</Grid>
 				<Rectangle Height="2" Color="#E3E4E3" /> 
 			</Each>

@@ -40,7 +40,7 @@ function totalAmount(){
 		}	               
 	}).then((res)=>{ return res.json()
 	}).then((res)=>{
-		console.log(res.data);
+		// console.log(res.data);
 		balance.value = addComma(res.data);
 		
 
