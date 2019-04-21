@@ -10,8 +10,8 @@ var right = Observable(0);
 var left = Observable(0);
 var opp = Observable();
 
-var count = 0;
 var pin = 0;
+var i = 0;
 
 exports.items = Observable()
 exports.isLoading = Observable(false);
@@ -23,39 +23,47 @@ function addComma(num) {
 
 svp.check()
 
-function loadSome() {
-
-
-	for (var i=0; i < 5; ++i ) {
-		if(count == 0){
-			exports.items.add( {
-				direction : "Left",
-				opp : "Right",
-				title : "공모전 수상",
-				content : "ROS",
-				expense : addComma(300000),
-				right : 0,
-				left : 10,
-			})
-			count = 1;
-		}
-		else if(count == 1){
-			exports.items.add( {
-				direction : "Right",
-				opp : "Left",
-				title : "회식",
-				content : "소주15, 맥주30, 안주 9",
-				expense : addComma(210000),
-				right : 10,
-				left : 0,
-			})
-			count = 0;
-		}
-	}
-
+function loadSome(){
 	
-	exports.isLoading.value = false
+	fetch('http://d4b1ca7d.ngrok.io/account/call/all',{
+		method: "GET",
+		headers: {
+			"Content-type": "application/JSON"
+		}	               
+	}).then((res)=>{ return res.json()
+	}).then((res)=>{
+		
+		for (;i < res.length ; i++) {
+			if("Import" == res[i].table_name){
+				exports.items.add( {
+					direction : "Left",
+					opp : "Right",
+					title : res[i].title,
+					content : res[i].based,
+					expense : addComma(res[i].amount),
+					right : 0,
+					left : 10,
+				})
+			}
+			else if("Expense" == res[i].table_name){
+				exports.items.add( {
+					direction : "Right",
+					opp : "Left",
+					title : res[i].title,
+					content : res[i].based,
+					expense : addComma(res[i].amount),
+					right : 10,
+					left : 0,
+				})
+			}
+		}	
 
+		exports.isLoading.value = false
+
+
+	}).catch((err)=>{
+		console.log("Error: " + error);
+	});
 }
 
 
