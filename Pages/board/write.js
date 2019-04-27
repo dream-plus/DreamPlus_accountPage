@@ -12,19 +12,15 @@ var day = new String(date.getDate());
 // 현재 날짜 구하는 곳 ============
 // 한자리수일 경우 0을 채워준다. 
 if(month.length == 1){ 
-  month = "0" + month; 
+	month = "0" + month; 
 } 
 if(day.length == 1){ 
-  day = "0" + day; 
+	day = "0" + day; 
 } 
 
 var currentdate = Observable(year+"."+month+"."+day);
 // console.log(currentdate.value);
 // ==============
-
-for(var i in category){
-	category.push(i);
-}
 
 
 var content = Observable("");
@@ -38,7 +34,7 @@ function goBack()
 
 function contents(){
 	var opts2 = ({
-		'_id': 'testid05',
+		'_id': 'testid07',
 		'name' : 'kbs',
 		'title' : title.value,
 		'category' : category.value,
@@ -46,14 +42,14 @@ function contents(){
 		date : currentdate.value
 	});
 
-    fetch('http://d4b1ca7d.ngrok.io/board/am',{
-    	method: "POST",
-    	headers: {
-    		"Content-type": "application/JSON"
-    	},
-    	body : JSON.stringify(opts2)
+	fetch('http://aa52f6e2.ngrok.io/board/am',{
+		method: "POST",
+		headers: {
+			"Content-type": "application/JSON"
+		},
+		body : JSON.stringify(opts2)
 
-    }).then((res)=>{
+	}).then((res)=>{
 	            // console.log(JSON.stringify(res));
 	            // console.log(JSON.parse(res));
 	            return res.json()

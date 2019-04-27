@@ -60,6 +60,7 @@
 		</Grid>
 
 		<PageControl ux:Name="navigation" Color="#FEFFFE">
+			<!-- <NavigationMotion GotoDurationExp="1"/> -->
 			<Page ux:Name="page1" Background="#EAEAEA" Color="#FFFCFE">
 				<WhileActive Threshold="0.01">
 					<Set indicator.LayoutMaster="page1Tab" />

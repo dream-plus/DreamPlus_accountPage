@@ -25,7 +25,7 @@ svp.check()
 
 function loadSome(){
 	
-	fetch('http://d4b1ca7d.ngrok.io/account/call/all',{
+	fetch('http://aa52f6e2.ngrok.io/account/call/all',{
 		method: "GET",
 		headers: {
 			"Content-type": "application/JSON"

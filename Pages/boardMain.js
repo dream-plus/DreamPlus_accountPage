@@ -48,7 +48,7 @@ exports.loadMore = function(){
 
 
 exports.loadSome=function(){
-	fetch('http://d4b1ca7d.ngrok.io/board/am',{
+	fetch('http://aa52f6e2.ngrok.io/board/am',{
 		method: "GET",
 		headers: {
 			"Content-type": "application/JSON"
